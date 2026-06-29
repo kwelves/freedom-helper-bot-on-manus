@@ -341,8 +341,8 @@ def main():
     logger.info(f"CHAT_ID: {CHAT_ID}")
     logger.info(f"Участников в списке: {len(usernames_list)}")
 
-    # Запуск бота
-    application.run_polling(allowed_updates=Update.ALL_TYPES)
+    # Запуск бота (drop_pending_updates=True — игнорируем старые обновления при запуске)
+    application.run_polling(allowed_updates=Update.ALL_TYPES, drop_pending_updates=True)
 
 
 if __name__ == "__main__":
