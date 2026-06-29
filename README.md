@@ -1,0 +1,1 @@
+# freedom-helper-bot-on-manus
