@@ -329,7 +329,7 @@ def main():
     job_queue.run_daily(
         send_meeting_reminder,
         time=datetime.time(hour=19, minute=0, tzinfo=TIMEZONE),
-        days=(0,),  # 0 = понедельник
+        days=(1,),  # 1 = понедельник (0=вс, 1=пн, 2=вт, 3=ср, 4=чт, 5=пт, 6=сб)
         data={"time": "21:00"}
     )
 
@@ -337,7 +337,7 @@ def main():
     job_queue.run_daily(
         send_meeting_reminder,
         time=datetime.time(hour=19, minute=0, tzinfo=TIMEZONE),
-        days=(3,),  # 3 = четверг
+        days=(4,),  # 4 = четверг
         data={"time": "21:00"}
     )
 
@@ -345,7 +345,7 @@ def main():
     job_queue.run_daily(
         send_meeting_reminder,
         time=datetime.time(hour=17, minute=0, tzinfo=TIMEZONE),
-        days=(5,),  # 5 = суббота
+        days=(6,),  # 6 = суббота
         data={"time": "19:00"}
     )
 
